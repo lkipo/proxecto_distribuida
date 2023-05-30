@@ -58,7 +58,7 @@ AligningRobot::action(const std::vector<mrs::RobotPtr> &swarm)
 
     m_vel = total / swarm.size(); // ? POSIBLEMENTE ESTEA MAL, TODO REVISAR
     m_vel.normalize();            // ? POSIBLEMENTE ESTEA MAL, TODO REVISAR
-    m_vel *settings().vMax;       // ? POSIBLEMENTE ESTEA MAL, TODO REVISAR
+    m_vel = m_vel*settings().vMax;       // ? POSIBLEMENTE ESTEA MAL, TODO REVISAR
   }
 
   else if (num < 0.05)
