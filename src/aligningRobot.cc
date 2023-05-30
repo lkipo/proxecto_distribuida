@@ -52,11 +52,11 @@ AligningRobot::action(const std::vector<mrs::RobotPtr> &swarm)
     }
 
     // !comentable
-    // total = total + velocity(); // TODO CAMBIAR ESTO
+    total = total + velocity(); // TODO CAMBIAR ESTO
     // count++; // TODO CAMBIAR ESTO
     
 
-    m_vel = total / swarm.size(); // ? POSIBLEMENTE ESTEA MAL, TODO REVISAR
+    m_vel = total / (swarm.size()+1); // ? POSIBLEMENTE ESTEA MAL, TODO REVISAR
     m_vel.normalize();            // ? POSIBLEMENTE ESTEA MAL, TODO REVISAR
     m_vel = m_vel*settings().vMax;       // ? POSIBLEMENTE ESTEA MAL, TODO REVISAR
   }
